@@ -20,10 +20,39 @@ class PackagesTableSeeder extends Seeder
         $pakcagesRome->price=4000.00;
         $pakcagesRome->where_from='Roma';
         $pakcagesRome->where_to='Atlanta';
-        $pakcagesRome->departure=2022;
-        $pakcagesRome->arrival=2022;
-        $pakcagesRome->hotel_name;
+        $pakcagesRome->departure= date('Y-m-d',strtotime(2021-06-19));
+        $pakcagesRome->arrival=date('Y-m-d',strtotime(2021-06-20));
+        $pakcagesRome->hotel_name='Giulio Cesare';
         
         $pakcagesRome->save();
+
+        $pakcageSParis= new Package();
+       
+        $pakcageSParis->package_name='Mille e una Notte';
+        $pakcageSParis->description="2 notti con colazione e wellness. Una raccolta ricca e completa per scegliere fra location da favola e vivere un sogno insieme ad una persona davvero speciale.";
+        $pakcageSParis->travelers=2;
+        $pakcageSParis->price=7000.00;
+        $pakcageSParis->where_from='Venezia';
+        $pakcageSParis->where_to='Parigi';
+        $pakcageSParis->departure= date('Y-m-d',strtotime(2022-02-02));
+        $pakcageSParis->arrival=date('Y-m-d',strtotime(2022-02-02));
+        $pakcageSParis->hotel_name='Pippo';
+        
+        $pakcageSParis->save();
+
+        $pakcageSParis= new Package();
+       
+        $pakcageSParis->package_name='Spagna!! Spagna!!!!';
+        $pakcageSParis->description="2 notti con colazione e wellness. Una raccolta ricca e completa per scegliere fra location da favola e vivere un sogno insieme ad una persona davvero speciale.";
+        $pakcageSParis->travelers=2;
+        $pakcageSParis->price=300.00;
+        $pakcageSParis->where_from='Venezia';
+        $pakcageSParis->where_to='Madrid';
+        $pakcageSParis->departure= date('Y-m-d',strtotime(2023-02-02));
+        $pakcageSParis->arrival=date('Y-m-d',strtotime(2023-02-02));
+        $pakcageSParis->hotel_name='Toro-Loco';
+        
+        $pakcageSParis->save();
+    
     }
 }
